@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class Take_word : MonoBehaviour
 {
-    [SerializeField] private Text text;
+    [SerializeField] private Text _text;
 
     public void Awake()
     {
-        text.text = TextMenu.our_word;
+        _text.text = TextMenu.our_word;
     }
 }

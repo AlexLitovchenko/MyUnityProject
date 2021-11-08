@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class Win_Los : MonoBehaviour
 {
     [SerializeField]
-    private GameObject obj;
+    private GameObject _obj;
     public GameObject True_Zone;
-    private int ind;
+    private int _ind;
 
     // Start is called before the first frame update
     void Start()
     {
         
-        ind = obj.name.Length - 7;
-        obj.name = obj.name.Remove(ind, 7);
+        _ind = _obj.name.Length - 7;
+        _obj.name = _obj.name.Remove(_ind, 7);
   
 
     }
@@ -29,9 +29,9 @@ public class Win_Los : MonoBehaviour
         {
             
             
-            if (TextMenu.our_word.ToLower() == obj.name.ToLower())
+            if (TextMenu.our_word.ToLower() == _obj.name.ToLower())
             {
-                if ((obj.transform.position.y <= True_Zone.transform.position.y + True_Zone.transform.localScale.y / 2) && (obj.transform.position.y >= True_Zone.transform.position.y - True_Zone.transform.localScale.y / 2) && (obj.transform.position.x <= True_Zone.transform.position.x + True_Zone.transform.localScale.x / 2) && (obj.transform.position.x >= True_Zone.transform.position.x - True_Zone.transform.localScale.x / 2))
+                if ((_obj.transform.position.y <= True_Zone.transform.position.y + True_Zone.transform.localScale.y / 2) && (_obj.transform.position.y >= True_Zone.transform.position.y - True_Zone.transform.localScale.y / 2) && (_obj.transform.position.x <= True_Zone.transform.position.x + True_Zone.transform.localScale.x / 2) && (_obj.transform.position.x >= True_Zone.transform.position.x - True_Zone.transform.localScale.x / 2))
                 {
                    // SceneManager.LoadScene(2);
                     Application.LoadLevel("Win");

@@ -8,17 +8,17 @@ using UnityEngine.UI;
 
 public class Our_word : MonoBehaviour
 {
-    [SerializeField] private InputField InputName;
+    [SerializeField] private InputField _InputName;
 
     public void Value()
     {
-        if (InputName.text == "")
+        if (_InputName.text == "")
         {
             Debug.Log("Error");
         }
         else
         {
-            TextMenu.our_word = InputName.text;
+            TextMenu.our_word = _InputName.text;
             
             Debug.Log(TextMenu.our_word);
         }
